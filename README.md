@@ -11,7 +11,10 @@ using eLearning's assignment download feature to organize and grade written, typ
 
 ## How To Use
 ### Installing from pip
-Coming soon!
+```bash
+pip install elearning-grading
+```
+
 ### Installing from GitHub
 ```bash
 git clone https://github.com/Supermaxman/elearning-grading

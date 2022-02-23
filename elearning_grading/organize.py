@@ -25,9 +25,8 @@ def main():
     with zipfile.ZipFile(input_path, "r") as zip_ref:
         zip_ref.extractall(code_path)
 
-    prefix_pattern = r"[^_]+_[^_]+_[^_]+_\d\d\d\d-\d\d-\d\d-\d\d-\d\d-\d\d"
     file_names = os.listdir(code_path)
-    file_groups = utils.group_by_prefix(file_names, prefix_pattern)
+    file_groups = utils.group_by_prefix(file_names, utils.netid_lower_regex)
 
     stats = utils.organize_groups(file_groups, code_path, reports_path)
 

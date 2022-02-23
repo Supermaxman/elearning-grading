@@ -7,13 +7,15 @@ from collections import defaultdict
 
 import rarfile
 
-netid_pattern = re.compile(r"[A-Za-z]{3}\d{6}")
+netid_regex = r"[a-z]{3}\d{6}"
+netid_find_regex = r"[A-Za-z]{3}\d{6}"
+netid_find_pattern = re.compile(netid_find_regex)
 
 
 def get_net_ids(text):
     netids = set()
     ordered_ids = []
-    for netid in netid_pattern.findall(text):
+    for netid in netid_find_pattern.findall(text):
         netid = netid.lower()
         if netid in netids:
             continue
