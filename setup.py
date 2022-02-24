@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 _PATH_ROOT = os.path.dirname(__file__)
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 # python setup.py sdist
 # twine upload .\dist\elearning-grading-VERSION.tar.gz
 HOMEPAGE = "https://github.com/Supermaxman/elearning-grading"
