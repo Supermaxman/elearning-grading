@@ -78,22 +78,22 @@ PDF or DOCX reports are organized into the `reports` folder, while
 everything else is considered potential `code` and is moved into the 
 `code` folder.
 <div align="left">
-    <img src="docs/images/ex3.PNG?raw=true" width="200px">
+    <img src="docs/images/ex3.PNG?raw=true" width="300px">
 </div>
 
 Each folder is organized by student netid as follows:
 <div align="left">
-    <img src="docs/images/ex4.PNG?raw=true" width="200px">
+    <img src="docs/images/ex4.PNG?raw=true" width="300px">
 </div>
 
 Where reports are included in `reports` folder for each netid:
 <div align="left">
-    <img src="docs/images/ex5.PNG?raw=true" width="200px">
+    <img src="docs/images/ex5.PNG?raw=true" width="300px">
 </div>
 
 And code is included in the `code` folder for each netid:
 <div align="left">
-    <img src="docs/images/ex6.PNG?raw=true" width="200px">
+    <img src="docs/images/ex6.PNG?raw=true" width="300px">
 </div>
 
 This organization structure makes grading much easier, as everything 
