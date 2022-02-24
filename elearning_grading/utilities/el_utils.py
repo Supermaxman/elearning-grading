@@ -52,15 +52,19 @@ def organize_groups(file_groups, output_path, pdf_path):
     stats = defaultdict(list)
     path_map = defaultdict(list)
 
-    for prefix, prefix_file_names in file_groups.items():
-        hw_name, net_id, _, timestamp = prefix.split("_")
+    for net_id, prefix_file_names in file_groups.items():
         student_path = os.path.join(output_path, net_id)
         student_pdf_path = os.path.join(pdf_path, net_id)
         # student_pdf_path = os.path.join(pdf_path, net_id + '.pdf')
         mkdir(student_pdf_path)
         mkdir(student_path)
-        prefix_length = len(prefix)
+        prefix = min([f for f in prefix_file_names if f.endswith(".txt")], key=lambda x: len(x))
+        prefix_length = len(prefix) - len(".txt")
         for file_name in prefix_file_names:
+            # skip text file with status stuff
+            if len(file_name) == prefix_length:
+                continue
+            # first occurrence of netid
             new_file_name = file_name[prefix_length:]
             if new_file_name.startswith("_"):
                 new_file_name = new_file_name[1:]

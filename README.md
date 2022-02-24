@@ -38,10 +38,67 @@ pip install -e .
 eLearning provides the `Assignment File Download` feature for Teaching Assistants to download assignment files 
 for the entire class. 
 Sadly, this feature makes grading assignments extremely tedious, 
-as the .zip file provided usually looks like this:
+as the .zip file provided usually looks like this (simulated):
+<div align="left">
+    <img src="docs/images/ex1.PNG?raw=true" width="400px">
+</div>
+
+With each student submission zip file populated with user-submitted content:
+<div align="left">
+    <img src="docs/images/ex2.PNG?raw=true" width="400px">
+</div>
+
+These archives could be .zip, .tar, .tar.gz, .rar, or more file types, and there could
+be multiple files for each student in the eLearning zip file.
+`elearning-grading` helps manage this chaos by organizing files and folders
+based on student netids, and splitting code and pdf reports.
+
+The `elg-org` tool works as follows:
+
 ```bash
-TODO
+elg-org --help
+usage: elg-org [-h] [-i INPUT_PATH] [-c CODE_PATH] [-r REPORTS_PATH]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_PATH, --input_path INPUT_PATH
+                        filepath to .zip file from eLearning.
+  -c CODE_PATH, --code_path CODE_PATH
+                        output folder for code, organized by netid.
+  -r REPORTS_PATH, --reports_path REPORTS_PATH
+                        output folder for pdf reports, organized by netid.
 ```
+
+For example, the above simulated eLearning submission zip file is organized like so:
+
+```bash
+elg-org -i tests/gradebook_7366-LRWYV-CO-3865-SEC000_Test207_2022-02-24-11-32-57.zip
+```
+PDF or DOCX reports are organized into the `reports` folder, while 
+everything else is considered potential `code` and is moved into the 
+`code` folder.
+<div align="left">
+    <img src="docs/images/ex3.PNG?raw=true" width="200px">
+</div>
+
+Each folder is organized by student netid as follows:
+<div align="left">
+    <img src="docs/images/ex4.PNG?raw=true" width="200px">
+</div>
+
+Where reports are included in `reports` folder for each netid:
+<div align="left">
+    <img src="docs/images/ex5.PNG?raw=true" width="200px">
+</div>
+
+And code is included in the `code` folder for each netid:
+<div align="left">
+    <img src="docs/images/ex6.PNG?raw=true" width="200px">
+</div>
+
+This organization structure makes grading much easier, as everything 
+is organized by netid and written reports are clearly marked for 
+grading.
 
 
 ### Generating simulated eLearning .zip files
@@ -82,20 +139,23 @@ This will generate an eLearning `Assignment File Download` file format filled wi
 random data, such as the following:
 `gradebook_7366-LRWYV-CO-3865-SEC000_Test207_2022-02-24-11-32-57.zip`
 <div align="left">
-    <img src="docs/images/ex1.PNG?raw=true" width="400px">
+    <img src="docs/images/ex1.PNG?raw=true" width="300px">
 </div>
 
 With each student submission zip file populated with random content:
 <div align="left">
-    <img src="docs/images/ex2.PNG?raw=true" width="400px">
+    <img src="docs/images/ex2.PNG?raw=true" width="300px">
 </div>
 
 ### Identifying project members
-
+```bash
+TODO
+```
 
 ### Organizing project code and reports
-
-
+```bash
+TODO
+```
 
 
 ## About Me
