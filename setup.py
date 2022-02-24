@@ -69,7 +69,7 @@ setup(
         "Natural Language :: English",
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",
-        "Topic :: Education :: Grading",
+        "Topic :: Education",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
