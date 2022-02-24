@@ -12,7 +12,8 @@ from datetime import timedelta
 from typing import Dict, List, Optional, Set, Type, Union
 
 import exrex
-from utils import netid_regex
+
+from elearning_grading.utilities import netid_regex
 
 
 def random_date(start: datetime.datetime, end: datetime.datetime) -> datetime.datetime:

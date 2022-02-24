@@ -2,7 +2,7 @@ import argparse
 import os
 import zipfile
 
-import utils
+from elearning_grading.utilities import el_utils
 
 
 def main():
@@ -19,16 +19,16 @@ def main():
     code_path = args.code_path
     reports_path = args.reports_path
 
-    utils.mkdir(code_path)
-    utils.mkdir(reports_path)
+    el_utils.mkdir(code_path)
+    el_utils.mkdir(reports_path)
 
     with zipfile.ZipFile(input_path, "r") as zip_ref:
         zip_ref.extractall(code_path)
 
     file_names = os.listdir(code_path)
-    file_groups = utils.group_by_prefix(file_names, utils.netid_lower_regex)
+    file_groups = el_utils.group_by_prefix(file_names, el_utils.netid_regex)
 
-    stats = utils.organize_groups(file_groups, code_path, reports_path)
+    stats = el_utils.organize_groups(file_groups, code_path, reports_path)
 
     # for net_id, files in stats.items():
     # 	print(f'{net_id}: nrof_files={len(files)}')

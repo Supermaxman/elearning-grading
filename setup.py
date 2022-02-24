@@ -80,10 +80,10 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "elg-org=elearning_grading.organize:main",
-            "elg-porg=elearning_grading.project_organize:main",
-            "elg-gen=elearning_grading.generate:main",
-            "elg-pmem=elearning_grading.project_members:main",
+            "elg-org=elearning_grading.organize.organize:main",
+            "elg-porg=elearning_grading.organize.project_organize:main",
+            "elg-gen=elearning_grading.generate.generate:main",
+            "elg-pmem=elearning_grading.organize.project_members:main",
         ],
     },
 )

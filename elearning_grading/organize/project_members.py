@@ -3,7 +3,8 @@ import os
 
 import docx
 import pdfplumber
-from utils import get_net_ids
+
+from elearning_grading.utilities.el_utils import get_net_ids
 
 
 def get_pdf_txt(file_path):

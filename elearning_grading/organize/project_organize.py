@@ -4,7 +4,8 @@ import shutil
 from collections import defaultdict
 
 import pandas as pd
-from utils import get_net_ids
+
+from elearning_grading.utilities.el_utils import get_net_ids
 
 
 def collect_team_files(team_map, root_dir):
